@@ -1,0 +1,14 @@
+<div class="card center">
+    <div >{{id}}</div>
+    <div >{{name}}</div>
+    <div >{{symbol}}</div>
+    <button (click)='moreInfo()' class="btn btn-success col-4">{{textButton}}</button>
+</div>
+<br>
+<app-info 
+  class='info'
+  *ngIf='info'
+  [coin]='info'>
+</app-info>
+
+

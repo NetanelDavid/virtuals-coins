@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="row">
+    <app-coin 
+      *ngFor='let coin of coins' 
+      class="col-4"
+      [coin]='coin'>
+    </app-coin>
+</div>
+
