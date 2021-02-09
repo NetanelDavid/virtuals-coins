@@ -10,7 +10,7 @@ export class CoinsListService {
   url:string;
   
   constructor(private httpclint :HttpClient) {
-    this.url = 'https://api.coingecko.com/api/v3/coins/list';
+    this.url = 'https://api.coingecko.com/api/v3/coins';
   }
 
   get():Observable<object>{

@@ -13,6 +13,7 @@ export class CoinsComponent implements OnInit {
    }
 
  coins:object[];
+ num=new Array(20);
 
   ngOnInit(): void {
   }
