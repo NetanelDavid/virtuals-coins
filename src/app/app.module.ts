@@ -11,6 +11,7 @@ import { CoinsComponent } from './components/coins/coins.component';
 import { CoinComponent } from './components/coin/coin.component';
 import { InfoComponent } from './components/info/info.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
     CoinComponent,
     InfoComponent,
     HeaderComponent,
+    ProgressComponent,
   ],
   imports: [
     BrowserModule,

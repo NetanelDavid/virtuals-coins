@@ -30,19 +30,5 @@ export class CoinsComponent implements OnInit {
         this.coins=d;
       }
     );
-  }
-
-  /*search(s:string):void{
-     if(this.coins.length <= 1){
-       this.get();
-     } else {
-       this.apiDataService.seach(s).subscribe(
-         (co:object) => {
-           this.coins =[co];
-           this.coins = this.coins.filter(coi => coi.symbol===s);
-         }
-       );
-     }
-    }*/
-  
+  }  
 }

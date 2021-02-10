@@ -28,12 +28,5 @@ export class CoinsListService {
         }
       ));
     }
-  }
-
-  /*seach(s:string):Observable<object[]>{
-    if(this.CoinsCache){
-      return of([...this.CoinsCache]);
-    }
-  }*/
-      
+  }      
 }

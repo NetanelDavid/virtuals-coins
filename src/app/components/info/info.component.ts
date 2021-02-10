@@ -15,10 +15,14 @@ export class InfoComponent implements OnInit {
   eur:number;
   ils:number;
 
-  constructor(private infoCoinService:InfoCoinService) {}
+  show:boolean;
+
+  constructor(private infoCoinService:InfoCoinService) {
+  }
 
   ngOnInit(): void {
     this.get();
+    this.finish(this.infoCoinService.infoCache[this.id]);
   }
 
   get():void{
@@ -35,5 +39,9 @@ export class InfoComponent implements OnInit {
     this.usd=this.coin.market_data.current_price.usd;
     this.eur=this.coin.market_data.current_price.eur;
     this.ils=this.coin.market_data.current_price.ils;
+  }
+
+  finish(f:boolean):void{
+    this.show=f;
   }
 }
