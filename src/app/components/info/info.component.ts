@@ -35,6 +35,5 @@ export class InfoComponent implements OnInit {
     this.usd=this.coin.market_data.current_price.usd;
     this.eur=this.coin.market_data.current_price.eur;
     this.ils=this.coin.market_data.current_price.ils;
-    //console.log(this.coin);
   }
 }

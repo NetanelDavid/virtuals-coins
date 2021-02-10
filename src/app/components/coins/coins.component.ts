@@ -10,12 +10,7 @@ export class CoinsComponent implements OnInit {
 
   constructor(private apiDataService:CoinsListService) { }
 
-<<<<<<< HEAD
   coins:any[];
-=======
- coins:object[];
- num=new Array(20);
->>>>>>> 4fc9a70dfb3a4fe8d10ed9ac4b943aac74ef943e
 
   ngOnInit(): void {
     this.get();
