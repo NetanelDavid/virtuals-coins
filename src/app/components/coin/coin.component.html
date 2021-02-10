@@ -1,14 +1,18 @@
-<div class="card center">
-    <div >{{id}}</div>
-    <div >{{name}}</div>
-    <div >{{symbol}}</div>
-    <button (click)='moreInfo()' class="btn btn-success col-4">{{textButton}}</button>
+<div *ngIf='coin' class="card">
+  <div class="catd-button custom-control custom-switch text-right">
+    <input type="checkbox" class="custom-control-input" [id]="name">
+    <label class="custom-control-label" [for]="name"></label>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" >{{symbol}}</h5>
+    <div class="card-text" >
+      <p>{{name}}</p>
+    </div>
+    <button (click)='moreInfo()' class="btn btn-primary width-button-fixed">{{textButton}}</button>
+  </div>
+  <app-info 
+  *ngIf='isInfo'
+  [id]='id'>
+  </app-info>
 </div>
 <br>
-<app-info 
-  class='info'
-  *ngIf='info'
-  [coin]='info'>
-</app-info>
-
-

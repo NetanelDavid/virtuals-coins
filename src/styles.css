@@ -18,3 +18,7 @@
 .button{
     margin-bottom:20px;
 }
+
+.width-button-fixed{
+    width: 120px;
+}

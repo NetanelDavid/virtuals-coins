@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { InfoCoinService } from 'src/app/services/info-coin.service';
 
 @Component({
   selector: 'app-info',
@@ -7,20 +8,33 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  @Input()coin:any;
+  @Input() id :string;
+  coin:any;
   img:string;
   usd:number;
   eur:number;
   ils:number;
 
-  constructor() { }
+  constructor(private infoCoinService:InfoCoinService) {}
 
   ngOnInit(): void {
-    this.img = this.coin.image.thumb;
+    this.get();
+  }
+
+  get():void{
+    this.infoCoinService.get(this.id).subscribe(
+      co=>{
+        this.coin=co;
+        this.dataPlacement();
+      }
+    )
+  }
+
+  dataPlacement():void{
+    this.img=this.coin.image.large;
     this.usd=this.coin.market_data.current_price.usd;
     this.eur=this.coin.market_data.current_price.eur;
     this.ils=this.coin.market_data.current_price.ils;
+    //console.log(this.coin);
   }
-
-  
 }

@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (searchEvent)='search($event)'></app-header>
 <div class="row">
+  <ng-container *ngFor='let coin of coins; let i= index'>
     <app-coin 
-      *ngFor='let coin of coins' 
-      class="col-4"
+       *ngIf='i &lt; 20'
       [coin]='coin'>
     </app-coin>
-</div>
-
+  </ng-container>
+  </div>

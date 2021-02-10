@@ -8,21 +8,41 @@ import { CoinsListService } from 'src/app/services/coins-list.service';
 })
 export class CoinsComponent implements OnInit {
 
-  constructor(private apiDataService:CoinsListService) {
-    this.get();
-   }
+  constructor(private apiDataService:CoinsListService) { }
 
- coins:object[];
+  coins:any[];
 
   ngOnInit(): void {
+    this.get();
   }
 
-  get():void{
+  search(s:string):void{
+    if(this.coins.length <= 1){
+      this.get();
+     } else {
+       this.coins =this.coins.filter(co => co.symbol===s);
+     }
+  }
+
+  get():void{ 
     this.apiDataService.get().subscribe(
-      (d:any)=> {
+      (d:object[]) => {
         this.coins=d;
       }
-    )
+    );
   }
 
+  /*search(s:string):void{
+     if(this.coins.length <= 1){
+       this.get();
+     } else {
+       this.apiDataService.seach(s).subscribe(
+         (co:object) => {
+           this.coins =[co];
+           this.coins = this.coins.filter(coi => coi.symbol===s);
+         }
+       );
+     }
+    }*/
+  
 }
