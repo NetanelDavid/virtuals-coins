@@ -1,6 +1,6 @@
 <app-progress *ngIf='!show' ns=3000 (finishEvent)='finish($event)'></app-progress>
 <div *ngIf='show'>
-  <app-header (searchEvent)='search($event)'></app-header>
+  <app-search (searchEvent)='search($event)'></app-search>
   <div class="row">
     <ng-container *ngFor='let coin of coins; let i= index'>
       <app-coin [coin]='coin'></app-coin>

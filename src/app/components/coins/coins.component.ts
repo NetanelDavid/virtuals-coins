@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CoinsListService } from 'src/app/services/coins-list.service';
 
 @Component({
-  selector: 'app-coins',
   templateUrl: './coins.component.html',
   styleUrls: ['./coins.component.css']
 })

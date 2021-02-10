@@ -1,11 +1,11 @@
 import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   search:string;
   isSearch:boolean;

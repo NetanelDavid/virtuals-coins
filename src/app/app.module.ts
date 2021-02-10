@@ -10,7 +10,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CoinsComponent } from './components/coins/coins.component';
 import { CoinComponent } from './components/coin/coin.component';
 import { InfoComponent } from './components/info/info.component';
-import { HeaderComponent } from './components/header/header.component';
+import { SearchComponent } from './components/search/search.component';
 import { ProgressComponent } from './components/progress/progress.component';
 
 
@@ -19,7 +19,6 @@ const routes: Routes = [
   {path: 'home',component:HomeComponent},
   {path: 'coins',component:CoinsComponent},
   {path: 'AboutUs',component:AboutUsComponent},
-  {path:'info',component:InfoComponent}
 ];
 
 @NgModule({
@@ -30,7 +29,7 @@ const routes: Routes = [
     CoinsComponent,
     CoinComponent,
     InfoComponent,
-    HeaderComponent,
+    SearchComponent,
     ProgressComponent,
   ],
   imports: [
