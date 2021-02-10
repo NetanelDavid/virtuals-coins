@@ -9,7 +9,7 @@ import { tap } from 'rxjs/operators'
 export class CoinsListService {
 
   url:string;
-  CoinsCache:any[];
+  CoinsCache:object[];
   
   constructor(private httpclint :HttpClient) {
     this.url = 'https://api.coingecko.com/api/v3/coins';
