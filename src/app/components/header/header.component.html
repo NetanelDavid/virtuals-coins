@@ -1,4 +1,5 @@
 <div class="row button">
+<<<<<<< HEAD
     <input
       [(ngModel)]='search' 
       placeholder="search..."  
@@ -11,3 +12,8 @@
       (click)='performSearch()' 
     > {{textSearch}}</button>
 </div>
+=======
+    <input [(ngModel)]='search' placeholder="search..."  class="col-2 first form-control" type="cearch" >
+    <button class="btn btn-primary" [disabled]='!search' (click)='performSearch()'>search</button>
+</div>
+>>>>>>> 4fc9a70dfb3a4fe8d10ed9ac4b943aac74ef943e
