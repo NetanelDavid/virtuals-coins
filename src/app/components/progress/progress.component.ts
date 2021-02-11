@@ -15,8 +15,7 @@ export class ProgressComponent implements OnInit {
   @Input() ns:number;
   progress=0;
   timer:any;
-
-  
+ 
 
   ngOnInit(): void {
 
