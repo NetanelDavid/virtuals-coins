@@ -1,0 +1,8 @@
+.progress-text{
+    position: relative;
+    text-align: center;
+    height: 0px;
+}
+.progress-background{
+    height: 25px;
+}

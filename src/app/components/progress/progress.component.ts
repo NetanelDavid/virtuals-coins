@@ -33,6 +33,4 @@ export class ProgressComponent implements OnInit {
     clearInterval(this.timer);
     this.finishEvent.emit(true);
   }
-
-
 }
