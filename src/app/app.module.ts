@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './components/app/app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -12,6 +13,9 @@ import { CoinComponent } from './components/coin/coin.component';
 import { InfoComponent } from './components/info/info.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { CheckBoxComponent } from './components/check-box/check-box.component';
+import { ReportsComponent } from './components/reports/reports.component';
+
 
 
 const routes: Routes = [
@@ -19,6 +23,7 @@ const routes: Routes = [
   {path: 'home',component:HomeComponent},
   {path: 'coins',component:CoinsComponent},
   {path: 'AboutUs',component:AboutUsComponent},
+  {path: 'reports',component:ReportsComponent},
 ];
 
 @NgModule({
@@ -31,6 +36,8 @@ const routes: Routes = [
     InfoComponent,
     SearchComponent,
     ProgressComponent,
+    CheckBoxComponent,
+    ReportsComponent,
   ],
   imports: [
     BrowserModule,

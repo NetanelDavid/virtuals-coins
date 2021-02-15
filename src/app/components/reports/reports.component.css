@@ -1,0 +1,19 @@
+.margin-left{
+    margin-left: 25px; ;
+}
+
+.btn{
+    width: 100px;
+    margin-left:5px ;
+}
+
+.window{
+    position:fixed;
+    z-index: 2;
+    top:50px;
+    left:25%;
+    width:50%;
+    color:brown;
+    text-align: center;
+    background-color: blanchedalmond;
+}

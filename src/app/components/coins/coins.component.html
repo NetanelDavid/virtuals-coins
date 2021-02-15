@@ -2,8 +2,6 @@
 <div *ngIf='show'>
   <app-search (searchEvent)='search($event)'></app-search>
   <div class="row">
-    <ng-container *ngFor='let coin of coins; let i= index'>
-      <app-coin [coin]='coin'></app-coin>
-    </ng-container>
+    <app-coin *ngFor='let coin of coins' [coin]='coin'></app-coin>
   </div>
 </div>

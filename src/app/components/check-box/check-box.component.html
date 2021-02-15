@@ -1,0 +1,13 @@
+<div class="catd-button custom-control custom-switch text-right">
+    <input
+      #checkbox
+      type="checkbox" 
+      class="custom-control-input" 
+      [id]="symbol" 
+      [checked]="open?false:reportsService.testing(symbol)"
+      (change)="addToReports(checkbox.checked)"
+      [disabled]='reportsService.isOpon' 
+      >
+    <label class="custom-control-label" [for]="symbol"></label>
+</div>
+<app-reports (hide)='hide()' checkbox='true' *ngIf='open'></app-reports>

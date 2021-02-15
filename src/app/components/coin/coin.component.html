@@ -1,8 +1,5 @@
 <div *ngIf='coin' class="card">
-  <div class="catd-button custom-control custom-switch text-right">
-    <input type="checkbox" class="custom-control-input" [id]="name" value="true">
-    <label class="custom-control-label" [for]="name"></label>
-  </div>
+<app-check-box [symbol]=symbol class='margin-right margin-top'></app-check-box>
   <div class="card-body">
     <h5 class="card-title" >{{symbol}}</h5>
     <div class="card-text" >
