@@ -1,13 +1,16 @@
-<div class="row button">
+<div class="row margin-bottom">
     <input
       [(ngModel)]='search' 
       placeholder="search..."  
       class="col-2 first form-control" 
-      type="cearch" 
-    >
-    <button 
+      type="cearch">
+      <button 
       class="btn btn-success width-button-fixed" 
       [disabled]='!isSearch && !search' 
       (click)='performSearch()' 
-    > {{textSearch}}</button>
+      >
+      <i *ngIf='isSearch' class="fas fa-arrow-alt-circle-right"></i>
+      <i *ngIf='!isSearch' class="fas fa-search"></i>
+      {{textSearch}}
+    </button>
 </div>

@@ -12,7 +12,7 @@ export class ProgressComponent implements OnInit {
   }
 
   @Output() finishEvent :EventEmitter<boolean>; 
-  @Input() ns:number;
+  @Input() ms:number;
   progress=0;
   timer:any;
  
@@ -25,7 +25,7 @@ export class ProgressComponent implements OnInit {
         this.progress=100;
         this.finish();
       }
-    },this.ns/10);
+    },this.ms/10);
   }
 
   finish():void{

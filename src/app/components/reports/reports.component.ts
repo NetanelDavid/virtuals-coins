@@ -11,6 +11,7 @@ export class ReportsComponent implements OnInit {
   @Output() hide :EventEmitter<boolean>;
 
   @Input() checkbox?:boolean;
+  @Input() symbol?:string;
 
   reports:string[];
   checked:boolean[];
@@ -39,7 +40,7 @@ export class ReportsComponent implements OnInit {
   }
 
   ok():void{
-    this.reportsservice.deleteQuantity([...this.checked]);
+    this.reportsservice.deleteQuantityAndAddOne([...this.checked],this.symbol);
     this.cancel();
   }
 

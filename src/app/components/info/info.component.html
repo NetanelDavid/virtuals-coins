@@ -1,4 +1,4 @@
-<app-progress *ngIf='!show' ns=1700 (finishEvent)='finish($event)'></app-progress>
+<app-progress *ngIf='!show' ms=1500 (finishEvent)='finish($event)'></app-progress>
 <div *ngIf='show' class='text-center'>
     <img [src]="img" width="180"> 
     <p>{{usd | currency: 'USD'}}</p>

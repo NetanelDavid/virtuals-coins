@@ -10,4 +10,4 @@
       >
     <label class="custom-control-label" [for]="symbol"></label>
 </div>
-<app-reports (hide)='hide()' checkbox='true' *ngIf='open'></app-reports>
+<app-reports (hide)='hide()'[symbol]='symbol' checkbox='true' *ngIf='open'></app-reports>

@@ -1,4 +1,4 @@
-<app-progress *ngIf='!show' ns=3000 (finishEvent)='finish($event)'></app-progress>
+<app-progress *ngIf='!show' ms=1700 (finishEvent)='finish($event)'></app-progress>
 <div *ngIf='show'>
   <app-search (searchEvent)='search($event)'></app-search>
   <div class="row">
