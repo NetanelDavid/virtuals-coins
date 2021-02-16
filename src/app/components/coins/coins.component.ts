@@ -18,11 +18,12 @@ export class CoinsComponent implements OnInit {
   }
 
   search(s:string):void{
-    if(this.coins.length <= 1){
+    if(!s){
       this.get();
-     } else {
-       this.coins =this.coins.filter(co => co.symbol===s);
-     }
+    } else {
+      this.get();
+      this.coins = this.coins.filter(co => co.symbol===s);
+    }
   }
 
   get():void{ 

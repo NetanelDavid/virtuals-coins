@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/coins",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

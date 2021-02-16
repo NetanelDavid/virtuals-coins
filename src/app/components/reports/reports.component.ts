@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 import { ReportsService } from 'src/app/services/reports.service';
 
+
 @Component({
   selector: 'app-reports',
   templateUrl: './reports.component.html',
