@@ -21,8 +21,7 @@ export class ProgressComponent implements OnInit {
 
     this.timer = setInterval(() => {
       this.progress += 10;
-      if(this.progress>=100){
-        this.progress=100;
+      if(this.progress==100){
         this.finish();
       }
     },this.ms/10);
