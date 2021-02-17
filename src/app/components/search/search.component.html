@@ -10,6 +10,6 @@
         [disabled]='isAll && !search'
       >
       {{isAll || search ? 'search ':'all coins '}}
-      <i [ngClass]="{'fas':true,'text-right':true ,'fa-search': isAll || search , 'fa-angle-right': !isAll && !search}"> </i>
+      <i [ngClass]="{'fas':true,'fa-search': isAll || search , 'fa-arrow-right': !isAll && !search}"> </i>
     </button>
   </div>
