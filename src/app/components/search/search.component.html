@@ -1,17 +1,15 @@
 <div class="row margin-bottom width limitation">
     <input
-      (focus)='focus()'
-      (blur)='blur()'
       [(ngModel)]='search' 
-      placeholder="search..."  
+      [placeholder]="!isAll && !search?'type in the search, or click to return.':'search...'"  
       class="col-2 first form-control" 
       type="cearch">
       <button 
-      class="btn btn-success" 
-      (click)='performSearch()' 
-      [disabled]='isAll && !search'
+        class="btn btn-success width-button-fixed" 
+        (click)='performSearch()' 
+        [disabled]='isAll && !search'
       >
-      <i *ngIf='!isAll && !isSearch' class="fas fa-arrow-alt-circle-right"></i>
-      <i *ngIf=' isAll || isSearch ' class="fas fa-search"></i>
+      {{isAll || search ? 'search ':'all coins '}}
+      <i [ngClass]="{'fas':true,'text-right':true ,'fa-search': isAll || search , 'fa-angle-right': !isAll && !search}"> </i>
     </button>
   </div>

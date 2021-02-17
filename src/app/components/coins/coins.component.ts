@@ -18,10 +18,8 @@ export class CoinsComponent implements OnInit {
   }
 
   search(s:string):void{
-    if(!s){
-      this.get();
-    } else {
-      this.get();
+    this.get();
+    if(s){
       this.coins = this.coins.filter(co => co.symbol===s);
     }
   }

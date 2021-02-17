@@ -9,40 +9,12 @@ export class SearchComponent implements OnInit {
 
   search:string;
   isAll:boolean;
-  isSearch:boolean;
-  timer:any;
 
   @Output()searchEvent:EventEmitter<string>;
 
   constructor() { 
     this.isAll=true;
-    this.isSearch=true;
     this.searchEvent=new EventEmitter();
-  }
-
-
-  focus():void{
-    this.timer = setInterval(() => {
-      this.change();
-    },10);
-  }
-
-  blur():void{
-    clearInterval(this.timer);
-  }
-
-  change():void{
-
-    if(this.isAll){
-      this.isSearch=true;
-    } else {
-      if(this.search){
-        this.isSearch=true;
-      } else {
-        this.isSearch=false;
-      }
-    }
-
   }
 
   performSearch():void{
@@ -51,7 +23,8 @@ export class SearchComponent implements OnInit {
     } else {
       this.isAll = true;
     }
-    this.searchEvent.emit(this.search);    
+    this.searchEvent.emit(this.search); 
+    this.search=null;   
   }
 
   ngOnInit(): void {
