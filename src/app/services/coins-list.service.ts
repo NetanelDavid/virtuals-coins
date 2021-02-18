@@ -21,7 +21,6 @@ export class CoinsListService {
       return of([...this.CoinsCache]);
     } else {
       return this.httpclint.get(this.url).pipe(tap(
-  
         (co:any[]) => {
           this.CoinsCache=co;
           console.log(this.CoinsCache);

@@ -26,7 +26,7 @@ export class ReportsService {
   }
   
   testing(symbol:string):boolean{
-    if(this._actives.indexOf(symbol)!=-1){
+    if(this._actives.indexOf(symbol)>-1){
       return true;
     }
     return undefined;

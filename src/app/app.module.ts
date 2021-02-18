@@ -16,8 +16,6 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { CheckBoxComponent } from './components/check-box/check-box.component';
 import { ReportsComponent } from './components/reports/reports.component';
 
-
-
 const routes: Routes = [
   {path: '',component:HomeComponent},
   {path: 'home',component:HomeComponent},
